@@ -23,7 +23,7 @@ function App(){
 
     <Routes>
       <Route path="/players" element={<ErrorBoundary fallback={<ErrorComp/>}><PlayerTable/></ErrorBoundary>}/>
-      <Route path="/teams" element={<ErrorBoundary fallback={<ErrorComp/>}><TeamCard/></ErrorBoundary>}/>
+      <Route path="/" element={<ErrorBoundary fallback={<ErrorComp/>}><TeamCard/></ErrorBoundary>}/>
       <Route path="/stats/:tid" element={<ErrorBoundary fallback={<ErrorComp/>}><Stats/></ErrorBoundary>}/>
     </Routes>
 

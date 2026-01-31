@@ -17,7 +17,7 @@ function Topbar(){
                 </a> 
 
                
-                <a href="/teams" className="col-start-5 text-gray-300 font-bold uppercase tracking-widest text-sm hover:text-white transition-colors duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+                <a href="/" className="col-start-5 text-gray-300 font-bold uppercase tracking-widest text-sm hover:text-white transition-colors duration-300 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
                     Teams
                 </a>
 

@@ -1,8 +1,8 @@
 import express, { type Request, type Response } from "express";
-import prisma from "../src/config/prisma";
+import prisma from "./src/config/prisma.ts";
 import cors from "cors";
 import swaggerUi from "swagger-ui-express";
-import swaggerSpec from "../src/config/swagger";
+import swaggerSpec from "./src/config/swagger.ts";
 
 
 const app = express();
