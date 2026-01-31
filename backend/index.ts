@@ -1,6 +1,8 @@
 import express, { type Request, type Response } from "express";
 import prisma from "./src/config/prisma.ts";
 import cors from "cors";
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./src/config/swagger.ts";
 
 
 const app = express();
@@ -8,9 +10,21 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 
 
+
+
+/**
+ * @openapi
+ * /teams:
+ *   get:
+ *     summary: Get all IPL teams
+ *     responses:
+ *       200:
+ *         description: List of teams
+ */
 app.get("/teams", async (req: Request, res: Response)=>{
 
     
@@ -30,6 +44,24 @@ app.get("/teams", async (req: Request, res: Response)=>{
 })
 
 
+
+/**
+ * @openapi
+ * /players/{number}:
+ *   get:
+ *     summary: Get paginated players
+ *     parameters:
+ *       - in: path
+ *         name: number
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: List of players
+ *       400:
+ *         description: Bad request
+ */
 app.get("/players/:number", async(req:Request, res: Response)=>{
 
     let pageNum = Number(req.params.number) -1;
@@ -66,6 +98,23 @@ app.get("/players/:number", async(req:Request, res: Response)=>{
 })
 
 
+
+
+/**
+ * @openapi
+ * /team-stats/{tid}:
+ *   get:
+ *     summary: Get stats for a team
+ *     parameters:
+ *       - in: path
+ *         name: tid
+ *         required: true
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Team stats
+ */
 app.get("/team-stats/:tid", async(req: Request, res: Response)=>{
 
     const team_id = Number(req.params.tid);
@@ -80,8 +129,23 @@ app.get("/team-stats/:tid", async(req: Request, res: Response)=>{
 
     res.status(200).json(allStats);
 
-
 })
+
+
+
+/**
+ * @openapi
+ * /health:
+ *   get:
+ *     summary: Health check endpoint
+ *     description: Returns server health status
+ *     responses:
+ *       200:
+ *         description: Server is healthy
+ */
+app.get("/health", (req: Request, res: Response) => {
+    res.status(200).json({ status: "ok" });
+});
 
 
 
