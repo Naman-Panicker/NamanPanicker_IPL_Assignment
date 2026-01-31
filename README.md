@@ -1,4 +1,4 @@
-# IPL Data Platform
+# The IPL Nerd
 
 A full-stack web application built using IPL (Indian Premier League) data.  
 The project demonstrates database modeling, backend API development, OpenAPI documentation, and frontend data visualization.
