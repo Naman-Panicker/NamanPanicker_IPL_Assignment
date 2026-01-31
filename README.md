@@ -47,4 +47,4 @@ Endpoint : Description
 ![landing](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/screenshots/landing.png?raw=true)
 ![loadingHandler](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/screenshots/loading_handler.png?raw=true)
 ![playerTable](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/screenshots/playertable.png?raw=true)
-![Stats](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/screenshot/stats.png?raw=true)
+![Stats](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/screenshots/stats.png?raw=true)
