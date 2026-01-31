@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Stats" ALTER COLUMN "highScore" SET DATA TYPE TEXT,
+ALTER COLUMN "lowScore" SET DATA TYPE TEXT;

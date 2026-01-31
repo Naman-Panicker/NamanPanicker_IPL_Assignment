@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Teams {
+  tid      Int       @id
+  name     String    @unique
+  abr      String    @unique
+  logo_url String    @unique
+  players  Players[]
+  stats    Stats[]
+}
+
+model Players {
+  pid        Int    @id
+  name       String
+  dob        String
+  birthplace String
+  country    String
+  role       String
+  bat        String
+  bowl       String
+  team_id    Int
+  team       Teams  @relation(fields: [team_id], references: [tid])
+}
+
+
+model Stats{
+  team_id Int @id
+  team    Teams @relation(fields: [team_id], references: [tid])
+  highScore String
+  highMargin_inRuns Int
+  highMargin_inWk Int
+  lowScore String
+  lowMargin_inRuns Int
+  lowMargin_inWk Int
+  wins Int
+  runs50 Int
+  runs100 Int
+  totalRuns Int
+  totalWks Int
+  extras Int
+}
