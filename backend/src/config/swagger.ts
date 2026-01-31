@@ -17,7 +17,7 @@ const swaggerSpec = swaggerJsdoc({
             }
         ]
     },
-    apis: ["./index.ts"]
+    apis: ["./src/index.ts"]
 });
 
 

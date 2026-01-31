@@ -16,7 +16,7 @@ function TeamCard() {
 
 
     useEffect(() => {
-        axios.get("http://localhost:3000/teams")
+        axios.get("http://localhost:3000/api/teams")
             .then((res) => {
                 setTeams(res.data)
             })

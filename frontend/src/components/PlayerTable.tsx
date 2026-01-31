@@ -21,7 +21,7 @@ function PlayerTable(){
     useEffect(()=>{
         setLoading(true)
 
-        axios.get(`http://localhost:3000/players/${pageCount}`)
+        axios.get(`http://localhost:3000/api/players/${pageCount}`)
         .then((res)=>{
             setPlayerData(res.data);
         })

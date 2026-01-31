@@ -18,7 +18,7 @@ function Stats() {
     useEffect(() => {
         setLoading(true)
 
-        axios.get(`http://localhost:3000/team-stats/${params.tid}`)
+        axios.get(`http://localhost:3000/api/team-stats/${params.tid}`)
             .then((res) => {
                 setStats(res.data);
             })
