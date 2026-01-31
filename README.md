@@ -42,9 +42,9 @@ Endpoint : Description
 `GET /team-stats/:tid` : Team statistics 
 
 
-##Screenshots 
+## Screenshots 
 
-![alt text](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/landing.png?raw=true)
-![alt text](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/loading_handler.png?raw=true)
-![alt text](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/playertable.png?raw=true)
-![alt text](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/stats.png?raw=true)
+![landing](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/landing.png?raw=true)
+![loadingHandler](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/loading_handler.png?raw=true)
+![playerTable](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/playertable.png?raw=true)
+![Stats](https://github.com/Naman-Panicker/NamanPanicker_IPL_Assignment/blob/main/stats.png?raw=true)
